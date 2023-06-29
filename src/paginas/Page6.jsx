@@ -1,17 +1,24 @@
+import { useContext } from "react"
 import Logo from "../componentes/Logo"
+import PageContext from "../context/PageContext.js"
 
 const Page6 = () => {
+
+    const {setEstadoPagina} = useContext(PageContext);
+
   return (
     <>
-        <div>
+        <div className="container">
             <Logo></Logo>
             <div className="form">
                 <h1>Con respecto a la universidad...</h1>
                 <form>
                     <fieldset>
                         <label htmlFor="curso">¿Volverías a tomar un curso con nosotros?</label>
-                        <input type="radio" name="curso" id="curso" />Si
-                        <input type="radio" name="curso" id="curso" />No
+                        <div className="puntuacionn">
+                        <input type="radio" name="curso" id="si" className="sino"/><label htmlFor="si">Si</label>
+                        <input type="radio" name="curso" id="no" className="sino"/><label htmlFor="no">No</label>
+                        </div>
                     </fieldset>
                     <fieldset>
                         <label htmlFor="mejorar">¿Cómo podemos mejorar?</label>
@@ -22,8 +29,16 @@ const Page6 = () => {
                         <input type="text" id="experiencia" placeholder="Cuentanos" autoFocus></input>
                     </fieldset>
                 </form>
-                <span>Atras</span>
-                <span>Siguiente</span>
+                <div className="botones">
+                <span onClick={()=>{
+                    setEstadoPagina("Page5");
+                }}>Atras</span>
+                {/* <span onClick={()=>{
+                    setEstadoPagina("Page7Confirm");
+                }}>Siguiente</span>
+            */}
+                 <button type="submit">Terminar</button>
+            </div>
             </div>
         </div>
     </>

@@ -1,0 +1,91 @@
+@use "./input" as i;
+
+@media (min-width:1100px) and (min-height:600px){
+    .local{
+        width: 100vw;
+        height: 100vh;
+        .container{
+            width: 88%;
+            height: 96.9vh;
+            gap: 16rem;
+            padding: 0.5rem 6.4375rem 0.5rem 3.375rem;
+            .logo{
+                width: 13.7rem;
+                height: 37rem;
+                p{
+                    width: 17rem;
+                    margin-left: -1.39rem;
+                    margin-top: -0.2rem;
+                    font-size: 7.7rem;
+                    letter-spacing: 0.5rem;
+                    line-height: 5.35rem;
+                }
+            }
+            .form{
+                height: 90%;
+                h1{
+                    font-size: 2.6rem;
+                }
+                h3{
+                    margin-top: -1.5rem;
+                }
+                fieldset{
+                    label{
+                        margin-top: 0.8rem;
+                        font-size: 1.2rem;
+                    }
+                    gap: 24px;
+                    border-bottom: 1rem;
+                }
+                //$font-size, $padding, $width, $height
+                @include i.input(1.2rem, 0.6rem, 44rem, 2.1rem);
+            }
+        }
+    }
+    
+}
+
+@media (min-width:1360px){
+    .local{
+        width: 100vw;
+        height: 100vh;
+        .container{
+            width: 88%;
+            height: 96vh;
+            gap: 17rem;
+            padding: 0.5rem 6.4375rem 0.5rem 3.375rem;
+            .logo{
+                width: 15.2rem;
+                height: 42.8125rem;
+                p{
+                    width: 19.7rem;
+                    margin-left: -2.15rem;
+                    margin-top: -0.2rem;
+                    font-size: 9rem;
+                    letter-spacing: 0.2rem;
+                    line-height: 6.25rem;
+                }
+            }
+            .form{
+                h1{
+                    font-size: 2.7rem;
+                }
+                h3{
+                    margin-top: -1.7rem;
+                }
+                fieldset{
+                    label{
+                        font-size: 1.4rem;
+                        margin-top: 1rem;
+                    }
+                    gap:30px;
+                    border-bottom: 1.2rem;
+                }
+                @include i.input(1.4rem, 0.8rem, 44rem, 2rem);
+            }
+        }
+    }
+
+}
+
+

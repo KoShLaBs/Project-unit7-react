@@ -1,0 +1,16 @@
+.logo{
+    flex-shrink: 0;
+    background-color: rgba(36, 122, 201, 1);
+
+    p{    
+        display: flex;
+        flex-direction: column;
+        word-break: break-all;
+        color: rgba(234, 245, 255, 1);
+        text-align: center;
+        font-family: Karla;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+}
+

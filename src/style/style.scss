@@ -1,0 +1,12 @@
+@use "reset";
+@use "var";
+@use "components";
+
+.local{
+    background-color: var.$bg-color;
+    .container{
+        display: inline-flex;
+        align-items: center;
+        font-family: var.$font-family;
+    }
+}

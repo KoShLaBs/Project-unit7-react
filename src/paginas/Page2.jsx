@@ -1,9 +1,14 @@
+import { useContext } from "react";
 import Logo from "../componentes/Logo"
+import PageContext from "../context/PageContext.js";
 
 const Page2 = () => {
+
+    const {setEstadoPagina} = useContext(PageContext);
+
   return (
     <>
-        <div>
+        <div className="container">
             <Logo></Logo>
             <div className="form">
                 <h1>Un par de datos personales para llenar la base de datos!</h1>
@@ -17,8 +22,14 @@ const Page2 = () => {
                         <input type="tel" id="telefono" placeholder="Numero telefonico" autoFocus></input>
                     </fieldset>
                 </form>
-                <span>Atras</span>
-                <span>Siguiente</span>
+                <div className="botones">
+                <span onClick={()=>{
+                    setEstadoPagina("Page1");
+                }}>Atras</span>
+                <span onClick={()=>{
+                    setEstadoPagina("Page3");
+                }}>Siguiente</span>
+                </div>
             </div>
         </div>
     </>

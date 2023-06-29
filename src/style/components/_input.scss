@@ -1,0 +1,140 @@
+@use "../var";
+
+@mixin input($font-size, $padding, $width, $height ){
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    select{
+        font-size: $font-size;
+        border-radius: 9999px;
+        border: none;
+        padding: $padding;
+        padding-left: $font-size;
+        width: $width;
+        height: $height;
+        background-color: var.$bg-color-dark;
+        color: var.$bg-color;
+
+
+        &:focus{
+            outline: none;
+        }
+
+        &::placeholder{
+            color: var.$bg-color;
+            
+        }
+
+        &::-ms-expand{
+            font-size: $font-size;
+            color: red;
+            border-right: 8px solid transparent;
+        }
+        
+    }
+
+    .seleccion{
+        select{
+            width: $width / 2;
+            height: $height * 1.5;
+            border-right: $font-size solid transparent;
+    }
+}
+
+    span{
+        width: $width - 33;
+        text-align: center;
+        padding: $padding * 1.7;
+        text-transform: uppercase;
+        font-size: $font-size;
+        height: $height - 30;
+        border-radius: 9999px;
+        border: none;
+        background-color: var.$bg-color-dark;
+        color: var.$bg-color;
+        &:hover{
+            background-color: var.$bg-color-dark-hover;
+        }
+    }
+
+    .botones{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: $width + 2;
+        height: $height;
+        margin-top: $height * 2;
+        button{
+            width: $width - 33;
+            text-align: center;
+            padding: $padding * 1.7;
+            text-transform: uppercase;
+            font-size: $font-size;
+            height: $height - 30;
+            border-radius: 9999px;
+            border: none;
+            background-color: var.$bg-color-dark;
+            color: var.$bg-color;
+                &:hover{
+                    background-color: var.$bg-color-dark-hover;
+                }
+        }
+    }
+
+    .puntuacion{
+        margin-top: -$font-size;
+        margin-bottom: -$font-size/2;
+        label{
+            &:hover{
+                color: var.$bg-color-dark-hover;
+            }
+        }
+    }
+    input[type="radio"]{
+        display: none;
+        &:checked+label{
+            color: var.$bg-color-dark-hover;
+            font-size: $font-size + 3.5;
+        }
+    }
+    
+    .puntuacionn{
+        
+        input[type="radio"]{
+            label{
+                &:hover{
+                    color: var.$bg-color-dark-hover;
+                }
+            }
+            
+            &:checked+label{
+                color: var.$bg-color-dark-hover;
+                font-size: $font-size + 3.5;
+            }
+            
+        }
+        input[type="radio"]+label{
+        display: inline-block;
+        cursor: pointer;
+        gap: $height;
+        color: var.$bg-color-dark;
+        font-weight: 800;
+        font-size: $font-size + 3;
+        letter-spacing: 0;
+        margin-top: -$font-size;
+        margin-left: $height *3;
+    }
+}        
+
+    input[type="radio"]+label{
+        display: inline-block;
+        cursor: pointer;
+        color: var.$bg-color-dark;
+        font-weight: 800;
+        font-size: $font-size + 3;
+        letter-spacing: $padding + 5;
+    }
+
+}
+

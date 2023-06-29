@@ -1,13 +1,20 @@
+import { useContext } from "react"
 import Logo from "../componentes/Logo"
+import PageContext from "../context/PageContext.js"
 
 const Page3 = () => {
+
+    const {setEstadoPagina} = useContext(PageContext);
+
   return (
     <>
-        <div>
+        <div className="container">
             <Logo></Logo>
             <div className="form">
                 <h1>Con respecto al curso tomado...</h1>
                 <form>
+                        <div className="seleccion">
+
                     <fieldset>
                         <label htmlFor="tematica">¿Qué tematica te gustó más?</label>
                         <select id="tematica">
@@ -36,13 +43,20 @@ const Page3 = () => {
                             <option value="angular">Angular</option>
                         </select>
                     </fieldset>
+                        </div>
                     <fieldset>
                         <label htmlFor="opinion">Opinión</label>
                         <input type="tel" id="opinion" placeholder="Dejanos tu opinión frente al curso, tematicas o algo que desearías contarnos" autoFocus></input>
                     </fieldset>
                 </form>
-                <span>Atras</span>
-                <span>Siguiente</span>
+                <div className="botones">
+                <span onClick={()=>{
+                    setEstadoPagina("Page2");
+                }}>Atras</span>
+                <span onClick={()=>{
+                    setEstadoPagina("Page4");
+                }}>Siguiente</span>
+                </div>
             </div>
         </div>
     </>
