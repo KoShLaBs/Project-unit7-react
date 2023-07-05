@@ -1,14 +1,22 @@
+import PropTypes from 'prop-types';
 import Logo from "../../componentes/Logo"
 
-const Page7Submit = () => {
+const Page7Submit = ({data}) => {
   return (
     <>
-        <div>
+        <div className="container"> 
             <Logo></Logo>
-            <h3>Muchas gracias por tomar la encuesta, nombre-usuario</h3>
+            <div className="form">
+            <h1>Muchas gracias por tomar la encuesta, {data.fullname}</h1>
+           </div>
         </div>
     </>
   )
+}
+
+
+Page7Submit.propTypes = {
+  data: PropTypes.object,
 }
 
 export default Page7Submit
