@@ -1,5 +1,7 @@
+//Donde se unen todos los scss antes de pasarlo al file components
 @use "../var";
-@use "./input" as i;
+@use "./seleccion";
+@use "./pages" as p;
 
 .form{
     justify-content: center;

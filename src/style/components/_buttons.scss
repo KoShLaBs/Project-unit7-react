@@ -1,0 +1,48 @@
+//Todos los botones o lo que simula ser un boton
+@use "../var";
+@mixin buttons($font-size, $padding, $width, $height ){
+    button{
+        width: $width - 33;
+        text-align: center;
+        padding: $padding * 1.7;
+        text-transform: uppercase;
+        font-size: $font-size;
+        height: $height - 30;
+        border-radius: 9999px;
+        margin-top: $padding +1;
+        border: none;
+        background-color: var.$bg-color-dark;
+        color: var.$bg-color;
+        &:hover{
+            background-color: var.$bg-color-dark-hover;
+        }
+    }
+
+    span{
+        width: $width - 33;
+        text-align: center;
+        padding: $padding * 1.7;
+        text-transform: uppercase;
+        font-size: $font-size;
+        height: $height - 30;
+        border-radius: 9999px;
+        margin-top: $padding +1;
+        border: none;
+        background-color: var.$bg-color-dark;
+        color: var.$bg-color;
+        cursor: pointer;
+        &:hover{
+            background-color: var.$bg-color-dark-hover;
+        }
+    }
+
+    .botones{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: $width + 2;
+        height: $height;
+        margin-top: $height ;
+    }
+
+}

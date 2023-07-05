@@ -1,5 +1,5 @@
+//Todos los componentes para pasarlo al main style
 @use "./components/logo";
-@use "./components/mediaqueries";
+@use "./queries/mediaqueries";
 @use "./components/page";
-@use "./components/seleccion";
 @use "./components/error";

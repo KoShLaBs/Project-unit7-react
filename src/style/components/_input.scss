@@ -1,3 +1,4 @@
+//Todos los inputs que hay en las paginas con sus caracteristicas y algunos con clases o dentro de una
 @use "../var";
 
 @mixin input($font-size, $padding, $width, $height ){
@@ -56,23 +57,7 @@
     }
 }
 
-    button{
-        width: $width - 33;
-        text-align: center;
-        padding: $padding * 1.7;
-        text-transform: uppercase;
-        font-size: $font-size;
-        height: $height - 30;
-        border-radius: 9999px;
-        margin-top: $padding +1;
-        border: none;
-        background-color: var.$bg-color-dark;
-        color: var.$bg-color;
-        &:hover{
-            background-color: var.$bg-color-dark-hover;
-        }
-    }
-
+   
     .textarea{
         border-radius: $font-size;
         padding: $padding *2;
@@ -90,32 +75,6 @@
         }
     }
 
-    span{
-        width: $width - 33;
-        text-align: center;
-        padding: $padding * 1.7;
-        text-transform: uppercase;
-        font-size: $font-size;
-        height: $height - 30;
-        border-radius: 9999px;
-        margin-top: $padding +1;
-        border: none;
-        background-color: var.$bg-color-dark;
-        color: var.$bg-color;
-        cursor: pointer;
-        &:hover{
-            background-color: var.$bg-color-dark-hover;
-        }
-    }
-
-    .botones{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: $width + 2;
-        height: $height;
-        margin-top: $height ;
-    }
 
     .puntuacion{
         margin-top: -$font-size;
@@ -129,6 +88,7 @@
             }
         }
     }
+
     input[type="radio"]{
         display: inline-block;
         position: absolute;
@@ -147,55 +107,6 @@
         font-weight: 800;
         font-size: $font-size + 3;
         
-    }
-
-    .square{
-        display: flex;
-            flex-direction: column;
-            justify-content: space-around;    
-        background-color: var.$bg-color-dark;
-        width: $width + 6;
-        height: $width + 5;
-        align-items: center;
-        justify-content: center;
-        border-radius: $font-size;
-        margin-left: -$font-size - 2;
-        .colum{
-            margin-top: $font-size;
-            display: flex;
-            flex-direction: row;
-            gap: $height + 5;
-            color: var.$bg-color;
-            font-size: $font-size;
-            .columone{
-                padding: $padding;
-            }
-            .columtwo{
-                padding: $padding;
-            }
-        }
-        .botones{
-            margin-bottom: $padding + 2;
-        }
-        h1{
-            color: var.$bg-color;
-            text-align: center;
-            margin-top: $font-size + 2;
-            font-size: $font-size + 1;
-        }
-    }
-
-    .h2{
-        padding: $padding - 0.2;
-        text-align: start;
-        font-weight: 700;
-    }
-    .h4{
-        $pad: $padding - 0.2;
-        $padd: $padding ;
-        padding: 0 0  $padd $pad;
-        text-align: start;
-        font-weight: 300;
     }
 
 }

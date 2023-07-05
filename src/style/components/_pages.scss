@@ -1,0 +1,11 @@
+// Todos los elementos de las paginas y componenetes traidos como include para poner una unica variable en los queries y en el file "page.scss"
+@use "../var";
+@use "./input" as i;
+@use "./submit" as s;
+@use "./buttons" as b;
+
+@mixin pages($font-size, $padding, $width, $height ){
+    @include i.input($font-size, $padding, $width, $height);
+    @include s.submit($font-size, $padding, $width, $height);
+    @include b.buttons($font-size, $padding, $width, $height);
+}
