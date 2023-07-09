@@ -10,7 +10,7 @@
         align-items: center;
         justify-content: center;
         margin-top: -$font-size - 3;        
-        margin-left: $font-size - 0.7;
+        margin-left: $font-size - 3.4;
         .colum{
             margin-top: $font-size;
             display: flex;
@@ -18,6 +18,7 @@
             gap: $height + 5;
             color: var.$bg-color;
             font-size: $font-size + 0.3;
+            width: 28rem;
             .columone{
                 padding: $padding;
             }
