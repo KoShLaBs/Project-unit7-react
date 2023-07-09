@@ -4,6 +4,8 @@ import PageContext from "../context/PageContext.js";
 import {Formik, Form, Field, ErrorMessage} from "formik";
 //import { pageTwoSchema } from "../schemas/pageTwoSchema";
 import PropTypes from 'prop-types';
+import { BsArrowRight } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
 
 const Page2 = ({data, updateData}) => {
 
@@ -22,6 +24,7 @@ const Page2 = ({data, updateData}) => {
                 <h1>Un par de datos personales para llenar la base de datos!</h1>
                 <Formik initialValues={data} onSubmit={onSubmit}>
                 <Form className="datos">
+                    <div className="Sseleccion">
                     <fieldset>
                         <label htmlFor="fullname">Nombre Completo</label>
                         <Field type="text" id="fullname" name="fullname" 
@@ -38,11 +41,12 @@ const Page2 = ({data, updateData}) => {
                         autoFocus value={data.tel || ""} onChange={(e)=> updateData("tel", e.target.value)}/>
                         <ErrorMessage name="tel" component="p" className="error-message"/>
                     </fieldset>
+                    </div>   
                 <div className="botones">
-                <span onClick={()=>{
+                <button onClick={()=>{
                     setEstadoPagina("Page1");
-                }}>Atras</span>
-                <button type="submit">Siguiente</button>
+                }}><p>Atras</p><BsArrowLeft className="icon__left"></BsArrowLeft></button>
+                <button type="submit"><p>Siguiente</p><BsArrowRight className="icon__rigth"/></button>
                 </div>
                 </Form>
                 </Formik>

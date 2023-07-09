@@ -2,8 +2,9 @@ import { useContext } from "react";
 import ConfirmText from "../../componentes/ConfirmText"
 import Logo from "../../componentes/Logo"
 import PageContext from "../../context/PageContext";
-
 import PropTypes from 'prop-types';
+import { MdClose } from "react-icons/md";
+import { BsCheck2 } from "react-icons/bs";
 
 const Page7ConfirmData = ({data}) => {
   
@@ -36,12 +37,12 @@ const Page7ConfirmData = ({data}) => {
                </div>
                
                 <div className="botones">
-                <span onClick={()=>{
+                <button onClick={()=>{
                   setEstadoPagina("Page6");
-                }}>Cancelar</span>
-                <span onClick={()=>{
+                }}><p>Cancelar</p><MdClose className="icon__left"/></button>
+                <button onClick={()=>{
                   setEstadoPagina("Page7Submit");
-                }}>Confirmar</span>
+                }}><p>Confirmar</p><BsCheck2 className="icon__rigth"/></button>
                 </div>
                 </div>
             </div>

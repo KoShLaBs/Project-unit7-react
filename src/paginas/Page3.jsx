@@ -3,6 +3,8 @@ import Logo from "../componentes/Logo"
 import PageContext from "../context/PageContext.js"
 import {Formik, Form, Field} from "formik";
 import PropTypes from 'prop-types';
+import { BsArrowRight } from "react-icons/bs";
+import { BsArrowLeft } from "react-icons/bs";
 
 const Page3 = ({data, updateData}) => {
 
@@ -78,10 +80,10 @@ const Page3 = ({data, updateData}) => {
                         {longitud}/2,254
                     </fieldset>
                 <div className="botones">
-                <span onClick={()=>{
+                <button onClick={()=>{
                     setEstadoPagina("Page2");
-                }}>Atras</span>
-                <button type="submit">Siguiente</button>
+                }}><p>Atras</p><BsArrowLeft className="icon__left"></BsArrowLeft></button>
+                <button type="submit"><p>Siguiente</p><BsArrowRight className="icon__rigth"/></button>
                 </div>
                 </Form>
                 </Formik>

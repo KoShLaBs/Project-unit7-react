@@ -16,30 +16,21 @@
         &:hover{
             background-color: var.$bg-color-dark-hover;
         }
-    }
-
-    span{
-        width: $width - 33;
-        text-align: center;
-        padding: $padding * 1.7;
-        text-transform: uppercase;
-        font-size: $font-size;
-        height: $height - 30;
-        border-radius: 9999px;
-        margin-top: $padding +1;
-        border: none;
-        background-color: var.$bg-color-dark;
-        color: var.$bg-color;
-        cursor: pointer;
-        &:hover{
-            background-color: var.$bg-color-dark-hover;
+        .icon{
+            &__rigth{
+                font-size: $font-size + 1;
+                font-weight: 800;
+                display: none;
+            }
+            &__left{
+                font-size: $font-size + 1;
+                font-weight: 800;
+                display: none;
+            }
         }
     }
 
     .botones{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         width: $width + 2;
         height: $height;
         margin-top: $height ;

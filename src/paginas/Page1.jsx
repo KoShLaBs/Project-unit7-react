@@ -7,6 +7,7 @@ import {Formik, Form, Field, ErrorMessage} from "formik";
 //import { pageOneSchema } from "../schemas/pageOneSchema";
 import PropTypes from 'prop-types';
 //import { initialValuesOne } from "../values/initialValuesOne";
+    import { BsArrowRight } from "react-icons/bs";
 
 const Page1 = ({data, updateData}) => {
 
@@ -45,6 +46,7 @@ const Page1 = ({data, updateData}) => {
                 <h1>Hola! Queremos saber mas de ti, ayudanos a completar esta encuesta</h1>
                 <Formik initialValues={data}  onSubmit={onSubmit}>
                 <Form className="datos">
+                    <div className="Sseleccion">
                     <fieldset>
                         <label htmlFor="email">Correo Electronico</label>
                         <Field id="email" name="email" placeholder="example@correo.com" type="email" required 
@@ -54,7 +56,8 @@ const Page1 = ({data, updateData}) => {
                         />
                         <ErrorMessage name="email" component="p" className="error-message"/>
                     </fieldset>
-                    <button type="submit">Empecemos</button>
+                    </div>
+                    <button type="submit"><p>Empecemos</p><BsArrowRight className="icon__rigth"/></button>
                 </Form>
                 </Formik>
             </div>

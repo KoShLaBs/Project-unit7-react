@@ -15,17 +15,20 @@ import Page7Submit from "./paginas/Page7/Page7Submit";
 
 function App() {
   const [estadoPagina, setEstadoPagina] = useState("Page1");
-  const [data, setData] = useState(initialValues);  
+  const [data, setData] = useState(initialValues);
   const updateData = (key, value) => {
     setData((prev) =>{
       return {...prev, [key]:value};
     });
   };
 
+  // const ajusteSize = document.body.width / window.innerWidth;
+  // div.width = ajusteSize;
+
   return (
     <>
     <PageContext.Provider value={{estadoPagina, setEstadoPagina}}>
-      <div className="local">
+      <body>
       {estadoPagina == "Page1" && <Page1 data={data} updateData={updateData}/>}
       {estadoPagina == "Page2" && <Page2 data={data} updateData={updateData}/>}
       {estadoPagina == "Page3" && <Page3 data={data} updateData={updateData}/>}
@@ -34,8 +37,8 @@ function App() {
       {estadoPagina == "Page6" && <Page6 data={data} updateData={updateData}/>}
       {estadoPagina == "Page7Confirm" && <Page7ConfirmData data={data} updateData={updateData}/>}
       {estadoPagina == "Page7Submit" && <Page7Submit data={data} updateData={updateData}/>}
-      
-      </div>
+
+      </body>
     </PageContext.Provider>
     </>
   )
