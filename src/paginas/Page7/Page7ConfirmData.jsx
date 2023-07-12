@@ -39,10 +39,10 @@ const Page7ConfirmData = ({data}) => {
                 <div className="botones">
                 <button onClick={()=>{
                   setEstadoPagina("Page6");
-                }}><p>Cancelar</p><MdClose className="icon__left"/></button>
+                }}><p>Cancelar</p><MdClose className="icon__close"/></button>
                 <button onClick={()=>{
                   setEstadoPagina("Page7Submit");
-                }}><p>Confirmar</p><BsCheck2 className="icon__rigth"/></button>
+                }}><p>Confirmar</p><BsCheck2 className="icon__confirm"/></button>
                 </div>
                 </div>
             </div>

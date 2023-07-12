@@ -16,6 +16,9 @@
         &:hover{
             background-color: var.$bg-color-dark-hover;
         }
+        p{
+            display: block;
+        }
         .icon{
             &__rigth{
                 font-size: $font-size + 1;
@@ -27,6 +30,16 @@
                 font-weight: 800;
                 display: none;
             }
+            &__confirm{
+                font-size: $font-size + 1;
+                    display: none;
+                    color: var.$bg-color;
+            }
+            &__close{
+                font-size: $font-size + 1;
+                display: none;
+                color: var.$bg-color;
+        }
         }
     }
 
@@ -34,6 +47,40 @@
         width: $width + 2;
         height: $height;
         margin-top: $height ;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: -$font-size;
+        button{
+
+            .icon{
+                &__rigth{
+                    font-size: $font-size + 1;
+                    font-weight: 800;
+                    display: none;
+                }
+                &__left{
+                    font-size: $font-size + 1;
+                    font-weight: 800;
+                    display: none;
+                }
+                &__confirm{
+                    font-size: $font-size + 1;
+                        display: none;
+                        color: var.$bg-color;
+                }
+                &__close{
+                    font-size: $font-size + 1;
+                    display: none;
+                    color: var.$bg-color;
+            }
+            }
+        }
+    }
+
+    h5{
+        font-size: $font-size * 3;
+        font-weight: 700;
     }
 
 }

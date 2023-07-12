@@ -62,16 +62,14 @@
             }
         }
                 
+        
+        
         .container{
             .form{
                 //$font-size, $padding, $width, $height
-                @include s.submitMobileSmall(1rem, 0.4rem, 37.6rem, 0.8rem);
+                @include s.submitMobile(0.9rem, 0.4rem, 47rem, 1.8rem);
             }
         }
-
-        .seleccion{
-            
-    }
         
 
     }

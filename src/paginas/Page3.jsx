@@ -74,7 +74,7 @@ const Page3 = ({data, updateData}) => {
                         <label htmlFor="opinion">Opinión</label>
                         
                         <Field as="textarea" className="textarea" id="opinion" name="opinion" placeholder="Dejanos tu opinión frente al curso, tematicas o algo que desearías contarnos" autoFocus
-                        required disabled={longitud > 2253 ? true : false}  title="Danos tu opinión"
+                        required disabled={longitud > 2253 ? true : false}  title="Cuentanos algo del curso"
                         value={data.opinion || ""} onChange={(e)=> updateData("opinion", e.target.value)}
                         />
                         {longitud}/2,254

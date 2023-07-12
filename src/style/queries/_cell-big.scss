@@ -2,31 +2,31 @@
 @use "../components/pages" as i;
 @use "../components/submitMobile" as s;
 
-@media (min-width:460px){
+@media (min-width:1080px) and (min-height:2260){
         .container{
             width: 100%;
             height: 96.9vh;
             gap: 2rem;
             
             .logo{
-                width: 47.6rem;
+                width: 48.6rem;
                 height: 10rem;
                 margin:0;
-                margin-left: 3.5rem;
+                margin-left: 0.2rem;
                 margin-top: -0.3rem;
                 padding: 0;
                 p{
-                    margin-left: 0.5rem;
-                    width:  47rem;
+                 
+                    margin-left: -2rem;
+                    width:  53rem;
                     height: 9.8rem;
                     font-size: 7.2rem;
-                    letter-spacing: 0.2rem;
+                    letter-spacing: 0.5rem;
                     line-height: 5.35rem;
                 }
             }
             .form{
                 gap: 2rem;
-                margin-left: 3rem;
                 height: 90%;
                 h1{
                     font-size: 2.6rem;
@@ -44,17 +44,18 @@
                 }
                 .botones{
                     margin-top: 6rem;
+
                 }
                 //$font-size, $padding, $width, $height
-                @include i.pages(1.1rem, 0.4rem, 37rem, 2rem);
+                @include i.pages(0.9rem, 0.4rem, 40rem, 1.8rem);
             }
         }
-                
-
+        
         .container{
             .form{
                 //$font-size, $padding, $width, $height
-                @include s.submitMobile(0.9rem, 0.4rem, 47rem, 1.8rem);
+                @include s.submitMobile(0.9rem, 0.4rem, 48.6rem, 1.8rem);
             }
         }
+        
     }

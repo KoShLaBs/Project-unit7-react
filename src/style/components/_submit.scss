@@ -8,12 +8,13 @@
             flex-direction: column;
             justify-content: space-around;    
         background-color: var.$bg-color-dark;
-        width: $width + 6;
-        height: $width + 5;
+        width: $width + 5;
+        height: $width - 6;
         align-items: center;
         justify-content: center;
         border-radius: $font-size;
         margin-left: -$font-size - 2;
+        margin-top: $padding - 0.5;
         .colum{
             margin-top: $font-size;
             display: flex;
@@ -29,12 +30,41 @@
             }
         }
         .botones{
-            margin-bottom: $padding + 2;
+            margin-bottom: $padding + 6;
+            margin-top: - $padding ;
+            align-items: center;
+            button{
+                p{
+                    display: block;
+                }
+                .icon{
+                    &__rigth{
+                        font-size: $font-size + 1;
+                        font-weight: 800;
+                        display: none;
+                    }
+                    &__left{
+                        font-size: $font-size + 1;
+                        font-weight: 800;
+                        display: none;
+                    }
+                    &__confirm{
+                        font-size: $font-size + 1;
+                            display: none;
+                            color: var.$bg-color;
+                    }
+                    &__close{
+                        font-size: $font-size + 1;
+                        display: none;
+                        color: var.$bg-color;
+                }
+            }
         }
+    }
         h1{
             color: var.$bg-color;
             text-align: center;
-            margin-top: $font-size + 2;
+            margin-top: $font-size + 3;
             font-size: $font-size + 1;
         }
     }

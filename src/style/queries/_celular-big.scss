@@ -50,11 +50,12 @@
                 @include i.pages(0.9rem, 0.4rem, 40rem, 1.8rem);
             }
         }
+
         
         .container{
             .form{
                 //$font-size, $padding, $width, $height
-                @include s.submitMobile(0.9rem, 0.4rem, 48.6rem, 1.8rem);
+                @include s.submitMobile(0.9rem, 0.4rem, 47rem, 1.8rem);
             }
         }
         

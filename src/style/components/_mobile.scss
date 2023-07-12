@@ -35,8 +35,26 @@
                     display: none;
                 }
                 .icon{
+                    &__rigth{
+                        
+                        font-weight: 800;
+                        display: block;
+                    }
+                    &__left{
+                        
+                        font-weight: 800;
+                        display: block;
+                    }
+                    &__confirm{
+                        display: block;
+                        color: var.$bg-color;
                 }
+                &__close{
+                    display: block;
+                    color: var.$bg-color;
             }
+                }
+                 }
             button{
                 display: flex;
                 flex-direction: row;                
@@ -53,12 +71,18 @@
                         display: block;
                         color: var.$bg-color;
                     }
+                    &__confirm{
+                        display: block;
+                        color: var.$bg-color;
                 }
+                &__close{
+                    display: block;
+                    color: var.$bg-color;
             }
         }
     }
 }
-
-
-
     }
+}
+
+}

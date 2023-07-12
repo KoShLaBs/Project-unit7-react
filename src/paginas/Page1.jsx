@@ -43,7 +43,8 @@ const Page1 = ({data, updateData}) => {
         <div className="container">
             <Logo></Logo>
             <div className="form">
-                <h1>Hola! Queremos saber mas de ti, ayudanos a completar esta encuesta</h1>
+                <h5>Hola!</h5>
+                <h1>Queremos saber mas de ti, ayudanos a completar esta encuesta</h1>
                 <Formik initialValues={data}  onSubmit={onSubmit}>
                 <Form className="datos">
                     <div className="Sseleccion">
