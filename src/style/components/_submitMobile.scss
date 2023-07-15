@@ -93,7 +93,7 @@
     .square{
         background-color: var.$bg-color-dark;
         width: $width + 6;
-        height: $width + 30;
+        height: $width + 32;
         align-items: center;
         justify-content: center;
         margin-top: -$font-size - 3;        
@@ -104,7 +104,6 @@
             display: flex;
             flex-direction: row;
             gap: 5rem;
-            margin-left: $font-size ;
             width: 18rem;
             color: var.$bg-color;
             font-size: $font-size + 0.3;
