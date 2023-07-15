@@ -1,0 +1,33 @@
+@use "../components/submitMobile" as s;
+
+@media (min-width:320px){
+
+    .container{
+        .form{
+            //$font-size, $padding, $width, $height
+            @include s.submitMobileSmall(0.9rem, 0.4rem, 47rem, 1.8rem);
+        }
+    }    
+}
+
+@media (min-width:460px){
+    
+    .container{
+        .form{
+            //$font-size, $padding, $width, $height
+            @include s.submitMobileSmall(0.9rem, 0.4rem, 47rem, 1.8rem);
+        }
+    }
+}
+
+@media (min-width:670px){
+       
+    .container{
+        .form{
+            //$font-size, $padding, $width, $height
+            @include s.submitMobile(0.9rem, 0.4rem, 47rem, 1.8rem);
+        }
+    }
+}
+
+

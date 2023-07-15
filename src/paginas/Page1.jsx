@@ -57,6 +57,7 @@ const Page1 = ({data, updateData}) => {
                         />
                         <ErrorMessage name="email" component="p" className="error-message"/>
                     </fieldset>
+                    {console.log(data)}
                     </div>
                     <button type="submit"><p>Empecemos</p><BsArrowRight className="icon__rigth"/></button>
                 </Form>

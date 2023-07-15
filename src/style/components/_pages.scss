@@ -2,10 +2,27 @@
 @use "../var";
 @use "./input" as i;
 @use "./submit" as s;
+@use "./submitMobile" as sm;
 @use "./buttons" as b;
 
 @mixin pages($font-size, $padding, $width, $height ){
     @include i.input($font-size, $padding, $width, $height);
-    @include s.submit($font-size, $padding, $width, $height);
     @include b.buttons($font-size, $padding, $width, $height);
+    
+    @media(min-width: 670px){
+        @include sm.submitMobile($font-size, $padding, $width*2, $height);
+    }
+    
+    @media(min-width: 530px){
+        @include sm.submitMobile($font-size, $padding, $width + 2, $height);
+    }
+    @media(min-width: 320px){
+        @include sm.submitMobileSmall($font-size, $padding, $width + 2, $height);
+    }
+    @media(min-width: 770px){
+        @include s.submit($font-size, $padding, $width, $height);
+    }
+    @media(min-width: 1350px){
+        @include s.submitGrande($font-size, $padding , $width, $height);
+    }
 }

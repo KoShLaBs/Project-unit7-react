@@ -1,6 +1,6 @@
 @use "../components/mobile";
 @use "../components/pages" as i;
-@use "../components/submitMobile" as s;
+//@use "../components/submitMobile" as s;
 
 @media (min-width:320px){
         .container{
@@ -9,14 +9,14 @@
             gap: 2rem;
             
             .logo{
-                width: 30.6rem;
+                width: 35.6rem;
                 height: 8rem;
                 margin:0;
-                margin-left: 1rem;
+                margin-left: 4rem;
                 margin-top: -0.4rem;
                 padding: 0;
                 p{
-                    margin-left: -0.5rem;
+                    margin-left: 5rem;
                     width:  29rem;
                     height: 8.8rem;
                     font-size: 4.9rem;
@@ -58,18 +58,12 @@
                     margin-top: 6rem;
                 }
                 //$font-size, $padding, $width, $height
-                @include i.pages(1.1rem, 0.4rem, 20rem, 2rem);
+                @include i.pages(1.1rem, 0.4rem, 30rem, 2rem);
             }
         }
                 
         
         
-        .container{
-            .form{
-                //$font-size, $padding, $width, $height
-                @include s.submitMobile(0.9rem, 0.4rem, 47rem, 1.8rem);
-            }
-        }
         
 
     }
