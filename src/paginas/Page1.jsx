@@ -1,13 +1,9 @@
-import { useContext,
-     //useState
-  } from "react";
-import Logo from "../componentes/Logo"
+import { useContext} from "react";
+import Logo from "../stories/Logo/Logo"
 import PageContext from "../context/PageContext.js";
 import {Formik, Form, Field, ErrorMessage} from "formik";
-//import { pageOneSchema } from "../schemas/pageOneSchema";
 import PropTypes from 'prop-types';
-//import { initialValuesOne } from "../values/initialValuesOne";
-    import { BsArrowRight } from "react-icons/bs";
+import Boton from "../stories/Boton/Boton";
 
 const Page1 = ({data, updateData}) => {
 
@@ -18,30 +14,10 @@ const Page1 = ({data, updateData}) => {
        setEstadoPagina("Page2");
     }   
 
-    // var inputProps = {
-    //             value: data.email,
-    //             onChange:(e)=> updateData("email", e.target.value)
-    //         };
-
-    //         var inputtProps = {
-    //             value: data.email,
-    //             className: "comid",
-    //         };
-    // const value = () => { 
-
-    //     if(pageOneSchema){
-               
-    //         inputProps; 
-    //     }else{
-    //         inputtProps;
-    //     }
-    // } 
-
-    
   return (
     <>
         <div className="container">
-            <Logo></Logo>
+            <Logo ></Logo>
             <div className="form">
                 <h5>Hola!</h5>
                 <h1>Queremos saber mas de ti, ayudanos a completar esta encuesta</h1>
@@ -59,7 +35,7 @@ const Page1 = ({data, updateData}) => {
                     </fieldset>
                     {console.log(data)}
                     </div>
-                    <button type="submit"><p>Empecemos</p><BsArrowRight className="icon__rigth"/></button>
+                    <Boton label="Empecemos" direction="rigth"></Boton>
                 </Form>
                 </Formik>
             </div>

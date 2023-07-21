@@ -9,19 +9,23 @@
     @include i.input($font-size, $padding, $width, $height);
     @include b.buttons($font-size, $padding, $width, $height);
     
+    //Cell big
     @media(min-width: 670px){
         @include sm.submitMobile($font-size, $padding, $width*2, $height);
     }
-    
+    //Celular
     @media(min-width: 530px){
         @include sm.submitMobile($font-size, $padding, $width + 2, $height);
     }
+    //cel pequeño
     @media(min-width: 320px){
         @include sm.submitMobileSmall($font-size, $padding, $width + 2, $height);
     }
+    //laptop pequeña
     @media(min-width: 770px){
         @include s.submit($font-size, $padding, $width, $height);
     }
+    //laptop grande
     @media(min-width: 1350px){
         @include s.submitGrande($font-size, $padding , $width, $height);
     }

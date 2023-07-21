@@ -1,11 +1,10 @@
 import { useContext } from "react";
-import Logo from "../componentes/Logo"
+import Logo from "../stories/Logo/Logo"
 import PageContext from "../context/PageContext.js";
 import {Formik, Form, Field, ErrorMessage} from "formik";
 //import { pageTwoSchema } from "../schemas/pageTwoSchema";
 import PropTypes from 'prop-types';
-import { BsArrowRight } from "react-icons/bs";
-import { BsArrowLeft } from "react-icons/bs";
+import Boton from "../stories/Boton/Boton";
 
 const Page2 = ({data, updateData}) => {
 
@@ -43,10 +42,10 @@ const Page2 = ({data, updateData}) => {
                     </fieldset>
                     </div>   
                 <div className="botones">
-                <button onClick={()=>{
+                <Boton label="Atras" direction="left" Onclick={()=>{
                     setEstadoPagina("Page1");
-                }}><p>Atras</p><BsArrowLeft className="icon__left"></BsArrowLeft></button>
-                <button type="submit"><p>Siguiente</p><BsArrowRight className="icon__rigth"/></button>
+                }}></Boton>
+                <Boton label="Siguiente" direction="rigth"></Boton>
                 </div>
                 </Form>
                 </Formik>

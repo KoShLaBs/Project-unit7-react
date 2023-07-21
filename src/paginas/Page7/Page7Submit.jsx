@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Logo from "../../componentes/Logo"
+import Logo from "../stories/Logo/Logo"
 
 const Page7Submit = ({data}) => {
   return (
